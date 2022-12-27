@@ -13,10 +13,6 @@ public class QuadratWurzelRechner {
         double eingeleseneZahlDouble = 0.0;
         int teiler;
         boolean primzahl;
-        double a;
-        //Wert für Methode SQRT einlesen
-        System.out.println("Bitte zu Wurzelnde Zahl eingeben: ");
-        a = sc.nextDouble();
         //Wert für Zahl einlesen (ist vlt der Zähler)
         System.out.println("Bitte Zahl eingeben: ");
         eingeleseneZahlDouble = sc.nextDouble();
@@ -26,8 +22,8 @@ public class QuadratWurzelRechner {
 
 
         double quadratWurzel;
-        quadratWurzel = Math.sqrt(a);
-        System.out.println(Math.sqrt(a));
+        quadratWurzel = Math.sqrt(eingeleseneZahlDouble);
+        System.out.println(Math.sqrt(eingeleseneZahlDouble));
         System.out.println(quadratWurzel);
         do {
             eingeleseneZahlDouble += 1.0;
