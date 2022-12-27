@@ -3,14 +3,14 @@ import java.lang.Math;
 public class QuadratWurzelRechner {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        double eingeleseneZahlInDouble = 0;
+        double eingeleseneZahlInDouble;
         eingeleseneZahlInDouble = QuadratWurzelRechner.quadratwurzelBerechnen();
         System.out.println("naechste Primzahl ist: " + eingeleseneZahlInDouble);
 
     }
     public static double quadratwurzelBerechnen(){
         Scanner sc = new Scanner(System.in);
-        double eingeleseneZahlDouble = 0.0;
+        double eingeleseneZahlDouble;
         int teiler;
         boolean primzahl;
         //Wert für Zahl einlesen (ist vlt der Zähler)
@@ -31,7 +31,9 @@ public class QuadratWurzelRechner {
             teiler = 2;
             primzahl  = true;
             do {
+                System.out.println(eingeleseneZahlDouble%teiler);
                     if(eingeleseneZahlDouble % teiler == 0.0){
+
                         primzahl = false;
                     }
                 teiler += 1;
