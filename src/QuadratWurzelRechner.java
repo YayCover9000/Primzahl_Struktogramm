@@ -36,14 +36,9 @@ public class QuadratWurzelRechner {
             do {
                 eingeleseneZahlDouble = (eingeleseneZahlDouble / teiler);
                 System.out.println("Eingelesene Zahl nach Mod Teiler: " + eingeleseneZahlDouble);
-                if (eingeleseneZahlDouble == 0.0) {
                     primzahl = false;
                     teiler += 1;
                     System.out.println("teiler in DO-While: " + teiler);
-                } else {
-                    primzahl = true;
-                }
-
             } while (primzahl == false || teiler > quadratWurzel);
         }while(primzahl == true);
         System.out.println("ERgebnis beider SChleifen: " + eingeleseneZahlDouble);
