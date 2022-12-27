@@ -34,15 +34,12 @@ public class QuadratWurzelRechner {
             teiler = 2;
             primzahl  = true;
             do {
-                eingeleseneZahlDouble = (eingeleseneZahlDouble % teiler);
-                System.out.println("Eingelesene Zahl nach Mod Teiler: " + eingeleseneZahlDouble);
-                    primzahl = false;
-                    teiler += 1;
+                teiler += 1;
                     System.out.println("teiler in DO-While: " + teiler);
-                    if(eingeleseneZahlDouble != 0.0){
-                        primzahl = true;
+                    if(eingeleseneZahlDouble % teiler == 0.0){
+                        primzahl = false;
                     }
-            } while (primzahl == false || teiler > quadratWurzel);
+            } while (primzahl == true && teiler <= (int)quadratWurzel);
         }while(!primzahl);
         System.out.println("ERgebnis beider SChleifen: " + eingeleseneZahlDouble);
     return eingeleseneZahlDouble;
