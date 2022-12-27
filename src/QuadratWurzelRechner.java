@@ -24,21 +24,22 @@ public class QuadratWurzelRechner {
 
         //Berechnung startet
 
-        System.out.println("EingeleseneZahl + 1 = " + eingeleseneZahlDouble);
+
         double quadratWurzel;
         quadratWurzel = Math.sqrt(a);
         System.out.println(Math.sqrt(a));
         System.out.println(quadratWurzel);
         do {
             eingeleseneZahlDouble += 1.0;
+            System.out.println("EingeleseneZahl + 1 = " + eingeleseneZahlDouble);
             teiler = 2;
             primzahl  = true;
             do {
-                teiler += 1;
-                    System.out.println("teiler in DO-While: " + teiler);
                     if(eingeleseneZahlDouble % teiler == 0.0){
                         primzahl = false;
                     }
+                teiler += 1;
+                System.out.println("teiler in DO-While: " + teiler);
             } while (primzahl == true && teiler <= (int)quadratWurzel);
         }while(!primzahl);
         System.out.println("ERgebnis beider SChleifen: " + eingeleseneZahlDouble);
