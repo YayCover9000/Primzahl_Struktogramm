@@ -3,14 +3,14 @@ import java.lang.Math;
 public class QuadratWurzelRechner {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        double eingeleseneZahlDouble = 0;
-        eingeleseneZahlDouble = QuadratWurzelRechner.quadratwurzelBerechnen(eingeleseneZahlDouble);
-        System.out.println("naechste Primzahl ist: " + eingeleseneZahlDouble);
+        double eingeleseneZahlInDouble = 0;
+        eingeleseneZahlInDouble = QuadratWurzelRechner.quadratwurzelBerechnen();
+        System.out.println("naechste Primzahl ist: " + eingeleseneZahlInDouble);
 
     }
-    public static double quadratwurzelBerechnen(double eingeleseneZahlDouble){
+    public static double quadratwurzelBerechnen(){
         Scanner sc = new Scanner(System.in);
-        //double eingeleseneZahlDouble = 0.0;
+        double eingeleseneZahlDouble = 0.0;
         int teiler;
         boolean primzahl;
         double a;
@@ -23,25 +23,30 @@ public class QuadratWurzelRechner {
         System.out.println("EingeleseneZahl: " + eingeleseneZahlDouble);
 
         //Berechnung startet
-        eingeleseneZahlDouble += 1.0;
-        teiler = 2;
-        primzahl  = true;
+
         System.out.println("EingeleseneZahl + 1 = " + eingeleseneZahlDouble);
         double quadratWurzel;
         quadratWurzel = Math.sqrt(a);
-
         System.out.println(Math.sqrt(a));
-            do{
-                eingeleseneZahlDouble = eingeleseneZahlDouble % teiler;
+        System.out.println(quadratWurzel);
+        do {
+            eingeleseneZahlDouble += 1.0;
+            teiler = 2;
+            primzahl  = true;
+            do {
+                eingeleseneZahlDouble = (eingeleseneZahlDouble % teiler);
                 System.out.println("Eingelesene Zahl nach Mod Teiler: " + eingeleseneZahlDouble);
-                if(eingeleseneZahlDouble == 0.0){
-                    primzahl = true;
+                if (eingeleseneZahlDouble >= 1.0) {
+                    primzahl = false;
                     teiler += 1;
-                }else{
-                    return eingeleseneZahlDouble;
+                    System.out.println("teiler in DO-While: " + teiler);
+                } else {
+                    primzahl = true;
                 }
 
-            }while(primzahl == false || teiler > quadratWurzel);
-        return 0;
+            } while (primzahl == false || teiler > quadratWurzel);
+        }while(primzahl == true);
+        System.out.println("ERgebnis beider SChleifen: " + eingeleseneZahlDouble);
+    return eingeleseneZahlDouble;
     }
 }
