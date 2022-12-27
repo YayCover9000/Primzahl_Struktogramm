@@ -16,14 +16,9 @@ public class QuadratWurzelRechner {
         //Wert für Zahl einlesen (ist vlt der Zähler)
         System.out.println("Bitte Zahl eingeben: ");
         eingeleseneZahlDouble = sc.nextDouble();
-        System.out.println("EingeleseneZahl: " + eingeleseneZahlDouble);
-
         //Berechnung startet
-
-
         double quadratWurzel;
         quadratWurzel = Math.sqrt(eingeleseneZahlDouble);
-        System.out.println(Math.sqrt(eingeleseneZahlDouble));
         System.out.println(quadratWurzel);
         do {
             eingeleseneZahlDouble += 1.0;
@@ -31,7 +26,7 @@ public class QuadratWurzelRechner {
             teiler = 2;
             primzahl  = true;
             do {
-                System.out.println(eingeleseneZahlDouble%teiler);
+                System.out.println("eingegebeneZahlDoubl % teiler: " + eingeleseneZahlDouble%teiler);
                     if(eingeleseneZahlDouble % teiler == 0.0){
 
                         primzahl = false;
