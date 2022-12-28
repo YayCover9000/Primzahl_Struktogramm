@@ -17,8 +17,8 @@ public class QuadratWurzelRechner {
         System.out.println("Bitte Zahl eingeben: ");
         eingeleseneZahlDouble = sc.nextDouble();
         //Berechnung startet
-        double quadratWurzel;
-        quadratWurzel = Math.sqrt(eingeleseneZahlDouble);
+        double quadratWurzel = 0;
+
         System.out.println(quadratWurzel);
         do {
             eingeleseneZahlDouble += 1.0;
@@ -28,12 +28,13 @@ public class QuadratWurzelRechner {
             do {
                 System.out.println("eingegebeneZahlDoubl % teiler: " + eingeleseneZahlDouble%teiler);
                     if(eingeleseneZahlDouble % teiler == 0.0){
-
                         primzahl = false;
                     }
                 teiler += 1;
                 System.out.println("teiler in DO-While: " + teiler);
+                quadratWurzel = Math.sqrt(eingeleseneZahlDouble);
             } while (primzahl == true && teiler <= (int)quadratWurzel);
+            System.out.println(quadratWurzel);
         }while(!primzahl);
         System.out.println("ERgebnis beider SChleifen: " + eingeleseneZahlDouble);
     return eingeleseneZahlDouble;
