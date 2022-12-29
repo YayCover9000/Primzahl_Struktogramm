@@ -19,24 +19,45 @@ public class QuadratWurzelRechner {
         //Berechnung startet
         double quadratWurzel = 0;
 
+/*
         System.out.println(quadratWurzel);
-        do {
-            eingeleseneZahlDouble += 1.0;
-            System.out.println("EingeleseneZahl + 1 = " + eingeleseneZahlDouble);
-            teiler = 2;
-            primzahl  = true;
+*/
+        if(eingeleseneZahlDouble > 2) {
+
             do {
-                System.out.println("eingegebeneZahlDoubl % teiler: " + eingeleseneZahlDouble%teiler);
+                eingeleseneZahlDouble += 1.0;
+/*
+                System.out.println("EingeleseneZahl + 1 = " + eingeleseneZahlDouble);
+*/
+                teiler = 2;
+                primzahl  = true;
+                do {
+/*
+                    System.out.println("eingegebeneZahlDoubl % teiler: " + eingeleseneZahlDouble%teiler);
+*/
                     if(eingeleseneZahlDouble % teiler == 0.0){
                         primzahl = false;
                     }
-                teiler += 1;
-                System.out.println("teiler in DO-While: " + teiler);
-                quadratWurzel = Math.sqrt(eingeleseneZahlDouble);
-            } while (primzahl == true && teiler <= (int)quadratWurzel);
-            System.out.println(quadratWurzel);
-        }while(!primzahl);
-        System.out.println("ERgebnis beider SChleifen: " + eingeleseneZahlDouble);
-    return eingeleseneZahlDouble;
+                    teiler += 1;
+/*
+                    System.out.println("teiler in DO-While: " + teiler);
+*/
+                    quadratWurzel = Math.sqrt(eingeleseneZahlDouble);
+                } while (primzahl == true && teiler <= (int)quadratWurzel);
+/*
+                System.out.println(quadratWurzel);
+*/
+            }while(!primzahl);
+/*
+            System.out.println("ERgebnis beider SChleifen: " + eingeleseneZahlDouble);
+*/
+        }else{
+            if(eingeleseneZahlDouble == 2){
+                primzahl = true;
+            }else{
+                primzahl = false;
+            }
+        }
+        return eingeleseneZahlDouble;
     }
 }
